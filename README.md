@@ -10,7 +10,9 @@ A comprehensive repository dedicated to implementing core Data Structures and Al
 │   ├── DoublyLinkList.cpp
 │   └── linkList.cpp
 ├── 📂 Stack/
+│   ├── StackUsingArray.cpp
 │   ├── StackUsingLL.cpp
+│   ├── TestStackUsingArray.cpp
 │   └── TestStackUsingLL.cpp
 └── README.md
 

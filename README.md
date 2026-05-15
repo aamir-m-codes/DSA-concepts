@@ -3,20 +3,15 @@
 A comprehensive repository dedicated to implementing core Data Structures and Algorithms from scratch. This project focuses on understanding the underlying logic, memory management, and efficiency of each structure.
 
 ## 📂 Repository Structure
-```text
-.
-├── 📂 Linked_List/
-│   ├── CircularLinkList.cpp
-│   ├── DoublyLinkList.cpp
-│   └── linkList.cpp
-├── 📂 Stack/
-│   ├── StackUsingArray.cpp
-│   ├── StackUsingLL.cpp
-│   ├── TestStackUsingArray.cpp
-│   └── TestStackUsingLL.cpp
-└── README.md
+### 🔗 Linked List
+    1. Singly Linked List
+    2. Doubly Linked List
+    3. Circular Linked List
 
-```
+### 📦 Stack
+    1. Stack using Linked List
+    2. Stack using Array
+
 
 ---
 *Maintained by [@aamir-m-codes](https://github.com/aamir-m-codes)*

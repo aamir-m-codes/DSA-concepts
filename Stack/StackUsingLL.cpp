@@ -15,6 +15,7 @@ public:
 
     Stack();
     Stack(int d);
+    ~Stack();
     void push(int d);
     int pop();
     bool isEmpty();
@@ -30,6 +31,17 @@ Stack::Stack(int d)
 {
     this->top = nullptr;
     this->push(d);
+}
+
+Stack::~Stack()
+{
+    Node *temp = this->top;
+    while (this->top != nullptr)
+    {
+        temp = this->top;
+        this->top = this->top->next;
+        delete temp;
+    }
 }
 
 void Stack::push(int data)
@@ -58,16 +70,16 @@ int Stack::pop()
     return data;
 }
 
-
 bool Stack::isEmpty()
 {
     return (this->top == nullptr) ? 1 : 0;
 }
 
-int Stack::peak(){
-    if(this->isEmpty())
+int Stack::peak()
+{
+    if (this->isEmpty())
     {
-        cout<<"Stack is empty"<<endl;
+        cout << "Stack is empty" << endl;
         return -1;
     }
     return this->top->data;

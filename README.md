@@ -12,6 +12,10 @@ A comprehensive repository dedicated to implementing core Data Structures and Al
     1. Stack using Linked List
     2. Stack using Array
 
+### 🎫 Queue
+    1. Simple Queue
+    2. Double Ended Queue
+    3. Circular Queue
 
 ---
 *Maintained by [@aamir-m-codes](https://github.com/aamir-m-codes)*

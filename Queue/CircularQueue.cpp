@@ -16,6 +16,7 @@ class CQueue
 public:
   CQueue();
   CQueue(int data);
+  ~CQueue();
 
   void enqueue(int data);
   void dequeue();
@@ -28,6 +29,24 @@ CQueue::CQueue() : front(nullptr), rear(nullptr) {}
 CQueue::CQueue(int data) : CQueue()
 {
   this->enqueue(data);
+}
+
+CQueue::~CQueue()
+{
+  if (this->isEmpty())
+    return;
+
+  this->rear->next = nullptr;
+
+  Node *temp;
+  while (this->front)
+  {
+    temp = this->front;
+    this->front = this->front->next;
+    delete temp;
+  }
+
+  this->rear = nullptr;
 }
 
 void CQueue::enqueue(int data)

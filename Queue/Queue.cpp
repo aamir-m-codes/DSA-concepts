@@ -16,6 +16,7 @@ class Queue
 public:
   Queue();
   Queue(int data);
+  ~Queue();
 
   void enqueue(int data);
   void dequeue();
@@ -28,6 +29,18 @@ Queue::Queue() : front(nullptr), rear(nullptr) {}
 Queue::Queue(int data) : Queue()
 {
   this->enqueue(data);
+}
+
+Queue::~Queue()
+{
+  Node *temp;
+  while (this->front != nullptr)
+  {
+    temp = this->front;
+    this->front = this->front->next;
+    delete temp;
+  }
+  this->rear = nullptr;
 }
 
 void Queue::enqueue(int data)
@@ -60,7 +73,7 @@ void Queue::dequeue()
   {
     this->rear = nullptr;
   }
-  
+
   temp->next = nullptr;
   delete temp;
 }

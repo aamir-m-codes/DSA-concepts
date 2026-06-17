@@ -15,6 +15,7 @@ class BST
 
   void clear(Node *curr);
   bool search_helper(Node *curr, int key);
+  void inorderTraversal(Node *rt);
 
 public:
   BST();
@@ -23,6 +24,7 @@ public:
 
   void insert(int data);
   void search(int key);
+  void traversal();
 };
 
 void BST::clear(Node *curr)
@@ -50,6 +52,16 @@ bool BST::search_helper(Node *curr, int key)
   else
   {
     return search_helper(curr->right, key);
+  }
+}
+
+void BST::inorderTraversal(Node *rt)
+{
+  if (rt != nullptr)
+  {
+    inorderTraversal(rt->left);
+    cout << rt->data << " ";
+    inorderTraversal(rt->right);
   }
 }
 
@@ -112,4 +124,9 @@ void BST::search(int key)
   Node *curr = this->root;
   bool is_found = this->search_helper(curr, key);
   is_found ? cout << key << " is found" << endl : cout << key << " Not found in BST";
+}
+
+void BST::traversal()
+{
+  this->inorderTraversal(this->root);
 }

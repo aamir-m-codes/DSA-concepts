@@ -129,4 +129,5 @@ void BST::search(int key)
 void BST::traversal()
 {
   this->inorderTraversal(this->root);
+  cout << endl;
 }

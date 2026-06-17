@@ -16,6 +16,8 @@ class BST
   void clear(Node *curr);
   bool search_helper(Node *curr, int key);
   void inorderTraversal(Node *rt);
+  void preorderTraversal(Node *rt);
+  void postorderTraversal(Node *rt);
 
 public:
   BST();
@@ -24,7 +26,7 @@ public:
 
   void insert(int data);
   void search(int key);
-  void traversal();
+  void traversal(int option = 0);
 };
 
 void BST::clear(Node *curr)
@@ -55,6 +57,16 @@ bool BST::search_helper(Node *curr, int key)
   }
 }
 
+void BST::preorderTraversal(Node *rt)
+{
+  if (rt != nullptr)
+  {
+    cout << rt->data << " ";
+    preorderTraversal(rt->left);
+    preorderTraversal(rt->right);
+  }
+}
+
 void BST::inorderTraversal(Node *rt)
 {
   if (rt != nullptr)
@@ -62,6 +74,16 @@ void BST::inorderTraversal(Node *rt)
     inorderTraversal(rt->left);
     cout << rt->data << " ";
     inorderTraversal(rt->right);
+  }
+}
+
+void BST::postorderTraversal(Node *rt)
+{
+  if (rt != nullptr)
+  {
+    postorderTraversal(rt->left);
+    postorderTraversal(rt->right);
+    cout << rt->data << " ";
   }
 }
 
@@ -126,8 +148,19 @@ void BST::search(int key)
   is_found ? cout << key << " is found" << endl : cout << key << " Not found in BST";
 }
 
-void BST::traversal()
+void BST::traversal(int option)
 {
-  this->inorderTraversal(this->root);
+  if (option == 0)
+  {
+    this->inorderTraversal(this->root);
+  }
+  else if (option == 1)
+  {
+    this->preorderTraversal(this->root);
+  }
+  else if (option == 2)
+  {
+    this->postorderTraversal(this->root);
+  }
   cout << endl;
 }

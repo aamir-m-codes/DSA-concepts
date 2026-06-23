@@ -17,5 +17,8 @@ A comprehensive repository dedicated to implementing core Data Structures and Al
     2. Double Ended Queue
     3. Circular Queue
 
+### 🌳 Binary Search Tree (BST)
+    1. Simple BST
+
 ---
 *Maintained by [@aamir-m-codes](https://github.com/aamir-m-codes)*

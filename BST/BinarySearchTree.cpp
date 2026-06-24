@@ -193,7 +193,7 @@ void BST::search(int key)
 {
   Node *curr = this->root;
   bool is_found = this->search_helper(curr, key);
-  is_found ? cout << key << " is found" << endl : cout << key << " Not found in BST";
+  is_found ? cout << key << " is found" << endl : cout << key << " Not found in BST" << endl;
 }
 
 void BST::traversal(int option)

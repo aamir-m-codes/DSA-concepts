@@ -18,7 +18,7 @@ class BST
   void inorderTraversal(Node *rt);
   void preorderTraversal(Node *rt);
   void postorderTraversal(Node *rt);
-  Node *inorderPredecessor();
+  Node *inorderPredecessor(Node *rt);
 
 public:
   BST();
@@ -88,9 +88,9 @@ void BST::postorderTraversal(Node *rt)
   }
 }
 
-Node *BST::inorderPredecessor()
+Node *BST::inorderPredecessor(Node *rt)
 {
-  Node *temp = this->root;
+  Node *temp = rt;
   if (temp == nullptr)
     return temp;
 

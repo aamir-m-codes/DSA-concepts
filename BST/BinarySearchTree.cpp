@@ -19,6 +19,7 @@ class BST
   void preorderTraversal(Node *rt);
   void postorderTraversal(Node *rt);
   Node *inorderPredecessor(Node *rt);
+  Node *deletion_helper(Node *rt, int key);
 
 public:
   BST();
@@ -28,6 +29,7 @@ public:
   void insert(int data);
   void search(int key);
   void traversal(int option = 0);
+  void deletion(int key);
 };
 
 void BST::clear(Node *curr)
@@ -99,6 +101,38 @@ Node *BST::inorderPredecessor(Node *rt)
     temp = temp->right;
 
   return temp;
+}
+
+Node *BST::deletion_helper(Node *rt, int key)
+{
+  if (rt == nullptr)
+    return nullptr;
+
+  if (key < rt->data)
+    rt->left = deletion_helper(rt->left, key);
+  else if (key > rt->data)
+    rt->right = deletion_helper(rt->right, key);
+  else
+  {
+    if (rt->right == nullptr)
+    {
+      Node *temp = rt->left;
+      delete rt;
+      return temp;
+    }
+    else if (rt->left == nullptr)
+    {
+      Node *temp = rt->right;
+      delete rt;
+      return temp;
+    }
+
+    Node *inorderPre = this->inorderPredecessor(rt);
+    rt->data = inorderPre->data;
+    rt->left = deletion_helper(rt->left, inorderPre->data);
+  }
+
+  return rt;
 }
 
 BST::BST() : root(nullptr) {}
@@ -177,4 +211,9 @@ void BST::traversal(int option)
     this->postorderTraversal(this->root);
   }
   cout << endl;
+}
+
+void BST::deletion(int key)
+{
+  this->root = this->deletion_helper(this->root, key);
 }

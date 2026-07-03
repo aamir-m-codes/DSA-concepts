@@ -14,12 +14,12 @@ class BST
   Node *root;
 
   void clear(Node *curr);
-  bool search_helper(Node *curr, int key);
+  bool searchHelper(Node *curr, int key);
   void inorderTraversal(Node *rt);
   void preorderTraversal(Node *rt);
   void postorderTraversal(Node *rt);
   Node *inorderPredecessor(Node *rt);
-  Node *deletion_helper(Node *rt, int key);
+  Node *deletionHelper(Node *rt, int key);
 
 public:
   BST();
@@ -43,7 +43,7 @@ void BST::clear(Node *curr)
   delete curr;
 }
 
-bool BST::search_helper(Node *curr, int key)
+bool BST::searchHelper(Node *curr, int key)
 {
   if (curr == nullptr)
     return false;
@@ -52,11 +52,11 @@ bool BST::search_helper(Node *curr, int key)
     return true;
   else if (key < curr->data)
   {
-    return search_helper(curr->left, key);
+    return searchHelper(curr->left, key);
   }
   else
   {
-    return search_helper(curr->right, key);
+    return searchHelper(curr->right, key);
   }
 }
 
@@ -103,15 +103,15 @@ Node *BST::inorderPredecessor(Node *rt)
   return temp;
 }
 
-Node *BST::deletion_helper(Node *rt, int key)
+Node *BST::deletionHelper(Node *rt, int key)
 {
   if (rt == nullptr)
     return nullptr;
 
   if (key < rt->data)
-    rt->left = deletion_helper(rt->left, key);
+    rt->left = deletionHelper(rt->left, key);
   else if (key > rt->data)
-    rt->right = deletion_helper(rt->right, key);
+    rt->right = deletionHelper(rt->right, key);
   else
   {
     if (rt->right == nullptr)
@@ -129,7 +129,7 @@ Node *BST::deletion_helper(Node *rt, int key)
 
     Node *inorderPre = this->inorderPredecessor(rt);
     rt->data = inorderPre->data;
-    rt->left = deletion_helper(rt->left, inorderPre->data);
+    rt->left = deletionHelper(rt->left, inorderPre->data);
   }
 
   return rt;
@@ -192,7 +192,7 @@ void BST::insert(int data)
 void BST::search(int key)
 {
   Node *curr = this->root;
-  bool is_found = this->search_helper(curr, key);
+  bool is_found = this->searchHelper(curr, key);
   is_found ? cout << key << " is found" << endl : cout << key << " Not found in BST" << endl;
 }
 
@@ -215,5 +215,5 @@ void BST::traversal(int option)
 
 void BST::deletion(int key)
 {
-  this->root = this->deletion_helper(this->root, key);
+  this->root = this->deletionHelper(this->root, key);
 }

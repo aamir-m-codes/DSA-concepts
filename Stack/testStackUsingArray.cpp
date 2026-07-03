@@ -1,5 +1,5 @@
 #include <iostream>
-#include "StackUsingArray.cpp"
+#include "stackUsingArray.cpp"
 
 using namespace std;
 

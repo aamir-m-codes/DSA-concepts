@@ -1,5 +1,5 @@
 #include <iostream>
-#include "DoublyLinkList.cpp"
+#include "doublyLinkList.cpp"
 
 using namespace std;
 

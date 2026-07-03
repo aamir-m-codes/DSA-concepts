@@ -1,5 +1,5 @@
 #include <iostream>
-#include "DEQueue.cpp"
+#include "deQueue.cpp"
 
 using namespace std;
 

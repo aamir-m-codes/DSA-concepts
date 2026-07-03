@@ -80,7 +80,7 @@ Stage your changes carefully (making sure **not** to include `exe files`), save 
 ```bash
 git add .
 git commit -m "feat: add priority queue implementation and test code"
-git push origin main
+git push origin master
 ```
 ---
 

@@ -5,15 +5,15 @@ using namespace std;
 
 int main()
 {
-  DList dl(8);
-  dl.insertAtEnd(9);
-  dl.insertAtEnd(4);
-  dl.insertAtEnd(1);
-  dl.insertAtPosition(6, 2);
-  dl.traversal(false);
+  DList doublyLL(8);
+  doublyLL.insertAtEnd(9);
+  doublyLL.insertAtEnd(4);
+  doublyLL.insertAtEnd(1);
+  doublyLL.insertAtPosition(6, 2);
+  doublyLL.traversal(false);
   cout << endl;
-  dl.deleteAtStart();
-  dl.deleteAtEnd();
-  dl.traversal(true);
+  doublyLL.deleteAtStart();
+  doublyLL.deleteAtEnd();
+  doublyLL.traversal(true);
   return 0;
 }

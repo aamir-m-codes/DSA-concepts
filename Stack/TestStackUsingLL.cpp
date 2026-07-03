@@ -5,11 +5,11 @@ using namespace std;
 
 int main()
 {
-  Stack s(4);
-  s.push(5);
-  s.push(6);
-  cout << "Peak: " << s.peak() << endl;
-  cout << "Pop: " << s.pop() << endl;
-  cout << "Peak: " << s.peak() << endl;
+  Stack stack(4);
+  stack.push(5);
+  stack.push(6);
+  cout << "Peak: " << stack.peak() << endl;
+  cout << "Pop: " << stack.pop() << endl;
+  cout << "Peak: " << stack.peak() << endl;
   return 0;
 }

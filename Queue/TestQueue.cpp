@@ -3,14 +3,14 @@
 
 int main()
 {
-  Queue q(45);
-  q.enqueue(39);
-  q.enqueue(10);
-  q.enqueue(91);
-  q.enqueue(78);
-  q.Traversal();
-  q.dequeue();
-  q.Traversal();
+  Queue queue(45);
+  queue.enqueue(39);
+  queue.enqueue(10);
+  queue.enqueue(91);
+  queue.enqueue(78);
+  queue.Traversal();
+  queue.dequeue();
+  queue.Traversal();
 
   return 0;
 }

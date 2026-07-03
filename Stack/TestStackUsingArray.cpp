@@ -5,16 +5,16 @@ using namespace std;
 
 int main()
 {
-  Stack s(6);
-  s.push(7);
-  s.push(5);
-  s.push(3);
-  s.push(4);
-  s.push(2);
-  s.push(1);
-  cout << "Top: " << s.peak() << endl;
-  cout << "Capacity: " << s.getCapacity() << endl;
-  s.push(10);
-  cout << "Capacity: " << s.getCapacity() << endl;
+  Stack stack(6);
+  stack.push(7);
+  stack.push(5);
+  stack.push(3);
+  stack.push(4);
+  stack.push(2);
+  stack.push(1);
+  cout << "Top: " << stack.peak() << endl;
+  cout << "Capacity: " << stack.getCapacity() << endl;
+  stack.push(10);
+  cout << "Capacity: " << stack.getCapacity() << endl;
   return 0;
 }

@@ -5,14 +5,14 @@ using namespace std;
 
 int main()
 {
-  List l(5);
-  l.insertAtEnd(9);
-  l.insertAtEnd(4);
-  l.insertAtEnd(1);
-  l.insertAtPosition(6, 2);
-  l.traversal();
-  l.deleteAtStart();
-  l.deleteAtEnd();
-  l.traversal();
+  List list(5);
+  list.insertAtEnd(9);
+  list.insertAtEnd(4);
+  list.insertAtEnd(1);
+  list.insertAtPosition(6, 2);
+  list.traversal();
+  list.deleteAtStart();
+  list.deleteAtEnd();
+  list.traversal();
   return 0;
 }

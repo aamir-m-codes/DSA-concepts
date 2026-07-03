@@ -5,17 +5,17 @@ using namespace std;
 
 int main()
 {
-  CQueue cq(37);
-  cq.enqueue(30);
-  cq.enqueue(82);
-  cq.Traversal();
+  CQueue circularQ(37);
+  circularQ.enqueue(30);
+  circularQ.enqueue(82);
+  circularQ.Traversal();
 
-  cq.dequeue();
-  cq.dequeue();
-  cq.Traversal();
+  circularQ.dequeue();
+  circularQ.dequeue();
+  circularQ.Traversal();
 
-  cq.enqueue(2);
-  cq.enqueue(9);
-  cq.Traversal();
+  circularQ.enqueue(2);
+  circularQ.enqueue(9);
+  circularQ.Traversal();
   return 0;
 }

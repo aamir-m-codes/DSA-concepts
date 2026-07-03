@@ -5,20 +5,20 @@ using namespace std;
 
 int main()
 {
-  DEQueue q(83);
+  DEQueue doubleEndedQ(83);
 
-  q.enqueueR(30);
-  q.enqueueR(82);
-  q.Traversal();
+  doubleEndedQ.enqueueR(30);
+  doubleEndedQ.enqueueR(82);
+  doubleEndedQ.Traversal();
 
-  q.dequeueF();
-  q.Traversal();
+  doubleEndedQ.dequeueF();
+  doubleEndedQ.Traversal();
 
-  q.enqueueF(1);
-  q.Traversal();
+  doubleEndedQ.enqueueF(1);
+  doubleEndedQ.Traversal();
 
-  q.dequeueR();
-  q.Traversal();
+  doubleEndedQ.dequeueR();
+  doubleEndedQ.Traversal();
 
   return 0;
 }

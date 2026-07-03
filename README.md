@@ -22,6 +22,8 @@ A comprehensive repository dedicated to implementing core Data Structures and Al
 
 ---
 ## 🤝 Contributing
+
 Contributions are always welcome! Whether you are optimizing existing code or introducing entirely new data structures/algorithms, please read our [Contributing Guidelines](CONTRIBUTING.md) to get started.
+
 ---
 *Maintained by [@aamir-m-codes](https://github.com/aamir-m-codes)*

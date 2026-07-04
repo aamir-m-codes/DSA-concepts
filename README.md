@@ -20,6 +20,11 @@ A comprehensive repository dedicated to implementing core Data Structures and Al
 ### 🌳 Binary Search Tree (BST)
     1. Simple BST
 
+### ⚙️ Algorithms
+- ### 🔍 Searching Algorithms
+      1. Linear Search
+      2. Binary Search
+
 ---
 ## 🤝 Contributing
 
